@@ -63,7 +63,7 @@ Django 2.0
     from .models import Product
     from .forms import ProductForm
 
-### Create
+###  Views Create
 
     def create_product(request):
       form = ProductForm(request.POST or None)
@@ -74,13 +74,13 @@ Django 2.0
       return render(request, ‘products.html’, {‘form:form'})
 
 
-### Reader
+### Views Reader
 
     def list_product(request):
       products = Product.objects.all() # retorna todas os objetos
       return render(request, ‘products.html’, {‘products:products'})
 	
-### Update
+### Views Update
 
     def update_product(request, id):
 
@@ -93,7 +93,7 @@ Django 2.0
 
         return render(request, ‘meuApp/up_product.html’, {‘form:form'})
 
-### Delete
+### Views Delete
 
     def deleta_product(request, id):
 
@@ -103,7 +103,7 @@ Django 2.0
          product.delete()
          return redirect('meuApp_list_product')
       else:
-         return render(request, 'meuApp/confirma_deletar.html', {'obj':product, 'url':'list_product'})
+         return render(request, 'meuApp/confirma_deletar.html', {'obj':product, 'url':''})
 
 
 ## Models.py
@@ -111,6 +111,7 @@ Django 2.0
     from django.db import models
 
     class Product(models.Model):
+    
       desc = models.CharField(max_length=100)
       price = models.DecimalField(max_digits=9, decimal_places=2)
       quantity = models.IntegerField)
@@ -129,7 +130,7 @@ Django 2.0
             model = Product
             fields = '__all__'
           
-## Cornfirma Deletar
+## confirma_deletar.html
 
     <h2>Tem Certeza que deseja Deletar {{obj}}? </h2>
 
@@ -142,3 +143,26 @@ Django 2.0
     </form>
 
     <a href="/meuApp/{{url}}/">Cancela</a>
+    
+ ## products.html
+ 
+	<h2>listar Produtos</h2>
+	<ul>
+		{% for product in products %}
+		<li>{{product.desc}}</li>
+		<li>{{product.price}}</li>
+		<li>{{product.quantity}}</li>
+		<li><a href="{% url 'up_product' product.id %}">Alterar</a></li>
+		<li><a href="{% url 'del_product' product.id %}">Apagar</a></li>
+		<br>
+		{% endfor %}
+	</ul>
+
+	<form action="{% url 'list_product'  %}" method="post">
+
+		{% csrf_token %}
+		{{form.as_p}}
+
+		<button type="submit">Novo Produto</button>
+
+	</form>
