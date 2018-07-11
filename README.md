@@ -166,3 +166,38 @@ Django 2.0
 		<button type="submit">Novo Produto</button>
 
 	</form>
+	
+## Templates
+
+1) crie uma pasta templates dentro do App
+2) crie uma pasta com o nome do App dentro de templates
+3) crie um arquivo index.html e link em urls
+
+	..
+	meuAPP
+	--templates
+	   --meuApp
+	     --index.html
+	   
+## static
+
+1) crie uma pasta static dentro do App
+2) crie uma pasta com o nome do App dentro de templates
+3) crie um arquivo index.html e link em urls
+
+	..
+	meuAPP
+	--templates
+	   --meuApp
+	     --style.css
+	     
+## settings.py
+	
+	DATABASES = {
+	    'default': {
+		'ENGINE': 'django.db.backends.sqlite3',
+		'NAME': os.path.join(BASE_DIR, 'nome_do_banco_db.sqlite3'),
+	    }
+	}
+
+	STATIC_URL = '/static/'
