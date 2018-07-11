@@ -5,6 +5,7 @@ Django 2.0
 ##  Criar a vens e start vent (activate)
 
     virtualenv -p python3 .venv
+    pythom3 -m venv venv
 
 ### Windows
 
