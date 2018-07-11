@@ -173,11 +173,11 @@ Django 2.0
 2) crie uma pasta com o nome do App dentro de templates
 3) crie um arquivo index.html e link em urls
 
-	..
-	meuAPP
-	--templates
-	   --meuApp
-	     --index.html
+		..
+		|___meuAPP
+		      |__templates
+			   |__meuApp
+			        |index.html	
 	   
 ## static
 
@@ -185,11 +185,11 @@ Django 2.0
 2) crie uma pasta com o nome do App dentro de templates
 3) crie um arquivo index.html e link em urls
 
-	..
-	meuAPP
-	--templates
-	   --meuApp
-	     --style.css
+		..
+		|___meuAPP
+		      |__templates
+			   |__meuApp
+			        |__style.css		
 	     
 ## settings.py
 	
@@ -201,3 +201,5 @@ Django 2.0
 	}
 
 	STATIC_URL = '/static/'
+	
+
