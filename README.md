@@ -177,7 +177,7 @@ Django 2.0
 		|___meuAPP
 		      |__templates
 			   |__meuApp
-			        |index.html	
+			        |__index.html	
 	   
 ## static
 
