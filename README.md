@@ -175,9 +175,9 @@ Django 2.0
 
 		..
 		|___meuAPP
-		      |__templates
-			   |__meuApp
-			        |__index.html	
+		       |__templates
+			      |__meuApp
+			            |__index.html	
 	   
 ## static
 
@@ -187,9 +187,9 @@ Django 2.0
 
 		..
 		|___meuAPP
-		      |__templates
-			   |__meuApp
-			        |__style.css		
+		       |__templates
+			      |__meuApp
+			            |__style.css		
 	     
 ## settings.py
 	
