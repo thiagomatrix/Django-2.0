@@ -22,11 +22,11 @@ Django 2.0
 
 ## Criar um projeto
 
-    django django-admin startproject nome .
+    django-admin startproject nome .
 
 ## Cria um App
 
-    django django-admin startapp nome
+    django-admin startapp nome
 
 ##  Registrar a app em settings
 
