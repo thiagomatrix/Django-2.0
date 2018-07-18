@@ -18,7 +18,7 @@ Django 2.0
 
 ### MacOS
 
-    source vens/bin/activate
+    source venv/bin/activate
 
 ## Criar um projeto
 
