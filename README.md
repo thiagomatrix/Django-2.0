@@ -2,11 +2,15 @@
 
 Django 2.0
 
+##  Start Server
+
+     sudo python3  manage.py runserver --insecure 192.168.0.102:80
+
 ##  Criar a vens e start vent (activate)
 
     virtualenv -p python3 .venv
-    pythom3 -m venv venv
-
+    python3 -m venv venv
+    
 ### Windows
 
     cd vens
@@ -14,7 +18,7 @@ Django 2.0
 
 ### MacOS
 
-    vens/bin/activate
+    source vens/bin/activate
 
 ## Criar um projeto
 
