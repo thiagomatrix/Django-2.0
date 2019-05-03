@@ -7,7 +7,7 @@ Django 2.0
      sudo python3  manage.py runserver --insecure 192.168.0.102:80
 
 ##  Criar a vens e start vent (activate)
-
+    sudo pip install virtualenv
     virtualenv -p python3 .venv
     python3 -m venv venv
     
